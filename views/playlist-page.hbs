@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ironhack Playlist</title>
+<h2>Playlist Page</h2>
 
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-  <h1>Ironhack Playlist</h1>
+<ul>
+  {{#each songList}}
+    <li>
+      <h3>{{ this.title }} ({{ this.year }})</h3>
+      <p>by {{ this.artist }}</p>
+      <img src="{{ this.photoUrl }}" />
+    </li>
+  {{/each}}
+</ul>
 
-  <h2>Playlist Page</h2>
-
-  <ul>
-    {{#each songList}}
-      <li>
-        <h3>{{ this.title }} ({{ this.year }})</h3>
-        <p>by {{ this.artist }}</p>
-        <img src="{{ this.photoUrl }}" />
-      </li>
-    {{/each}}
-  </ul>
-
-  <a href="/">Back to Home</a>
-</body>
-</html>
+<a href="/">Back to Home</a>
