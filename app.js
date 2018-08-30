@@ -1,6 +1,7 @@
 // Setup
 // -----------------------------------------------------------------------------
 const express = require("express");
+const hbs = require("hbs");
 
 const app = express();
 
@@ -13,6 +14,9 @@ app.set("view engine", "hbs");
 
 // uncomment the next line if you want to change the name of the "views/" folder
 // app.set("views", __dirname + "/my-templates");
+
+// makes partials inside of "views/partials/" available in our templates
+hbs.registerPartials(__dirname + "/views/partials");
 
 
 
